@@ -1,7 +1,6 @@
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 import static java.nio.file.StandardOpenOption.CREATE;
@@ -10,7 +9,7 @@ public class PersonGenerator {
     public static void main(String[] args) {
 
         File workingDirectory = new File(System.getProperty("user.dir"));
-        Path file = Paths.get(workingDirectory.getPath().toString(), "src", "PersonTestData.txt");
+        Path file = Path.of("PersonTestData.txt");
 
         String ID = "";
         String firstName = "";
